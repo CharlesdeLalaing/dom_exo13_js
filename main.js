@@ -5,39 +5,57 @@
 // ### 5. Rajoute un count(compteur ou index comme tu l'entends) dans ta boucle
 // ### 6. Sert toi de ce count/index pour parcourir ton tableau myElement dans ta boucle et d'y insirer ce qu'on te retourne a l'énoncé 4
 
+// let myObject = {
+//     nom: 'nicolas',
+//     age: 18,
+// }
+
+// //1
+// let myElement = Array.from(document.querySelector('div#object').children);
+// console.log(myElement);
+
+// //2
+// let exo2 = Object.entries(myObject);
+// console.log(exo2);
+
+// //3
+// exo2.forEach(element => {
+//     console.log(element);
+// });
+
+// //4
+// exo2.forEach(element => {
+//     console.log(element[0]);
+// });
+
+// //5
+// exo2.forEach((element,index) => {
+//     console.log(index + ' ' + element[0]);
+// });
+
+// //6
+// myElement.forEach(element => {
+//     console.log(element);
+// });
+
+
+
+
+// correction
+
 let myObject = {
     nom: 'nicolas',
     age: 18,
 }
 
-//1
-let myElement = Array.from(document.querySelector('div#object').children);
+//exo1
+
+let myElement = document.querySelector('div#object').children;
 console.log(myElement);
 
-//2
-let exo2 = Object.entries(myObject);
-console.log(exo2);
+//exo2
 
-//3
-exo2.forEach(element => {
-    console.log(element);
-});
-
-//4
-exo2.forEach(element => {
-    console.log(element[0]);
-});
-
-//5
-exo2.forEach((element,index) => {
-    console.log(index + ' ' + element[0]);
-});
-
-//6
-myElement.forEach(element => {
-    console.log(element);
-});
-
-
-
+Object.keys(myObject).forEach((element,index) => {
+    (myElement[index].innerText = myObject[element]);
+});;
 
